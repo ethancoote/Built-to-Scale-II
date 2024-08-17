@@ -14,6 +14,12 @@ if x_spd != 0 && y_spd != 0 {
 	y_spd = y_spd * .707;
 }
 
+// eat
+var _inst = instance_place(x, y, oFood);
+if _inst != noone {
+	instance_destroy(_inst);
+}
+
 // y collision
 var _sub_pixel = 0.5;
 if place_meeting(x, y+y_spd, walls) {
