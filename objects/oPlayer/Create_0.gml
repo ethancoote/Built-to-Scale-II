@@ -5,7 +5,8 @@ depth = 0;
 // states
 enum STATE {
 	IDLE,
-	RUN
+	RUN,
+	STILL
 }
 
 enum FACE {
@@ -22,7 +23,7 @@ x_spd = 0;
 y_spd = 0;
 face_index = FACE.DOWN;
 state_index = STATE.IDLE;
-
+win = false;
 
 // getting tilemaps
 walls = [layer_tilemap_get_id("Walls"), 

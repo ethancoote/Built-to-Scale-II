@@ -50,6 +50,15 @@ if _inst != noone {
 
 #endregion
 
+#region Win
+// win condition
+if win {
+	x_spd = 0;
+	y_spd = 0;
+	state_index = STATE.STILL;
+}
+#endregion
+
 #region Collision
 // y collision
 var _sub_pixel = 0.5;
@@ -100,6 +109,12 @@ if state_index == STATE.IDLE {
 	} else if face_index == FACE.RIGHT {
 		sprite_index = sRunRight;
 	}
+} else if state_index == STATE.STILL {
+	if image_index == 13 {
+		image_speed = 0;
+	}
+	sprite_index = sFall;
+
 }
 
 #endregion
