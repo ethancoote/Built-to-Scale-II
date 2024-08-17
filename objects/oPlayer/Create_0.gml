@@ -1,6 +1,6 @@
 // stats
 spd = 2.5;
-depth = 0;
+depth = 200;
 
 // states
 enum STATE {
