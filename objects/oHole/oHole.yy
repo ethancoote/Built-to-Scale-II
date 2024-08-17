@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oApple",
+  "%Name":"oHole",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oApple",
+  "name":"oHole",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interact",
-    "path":"folders/Objects/Interact.yy",
+    "name":"Environments",
+    "path":"folders/Objects/Environments.yy",
   },
-  "parentObjectId":{
-    "name":"oFood",
-    "path":"objects/oFood/oFood.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sApple",
-    "path":"sprites/sApple/sApple.yy",
+    "name":"sHole",
+    "path":"sprites/sHole/sHole.yy",
   },
   "spriteMaskId":null,
   "visible":true,
