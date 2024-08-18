@@ -16,6 +16,7 @@ throw_frames = 60;
 throw_anim_frames = 10;
 attack_anger = 1;
 throw_dist = 100;
+anger_range = 130;
 
 // misc
 wait_timer = round(random_range(20,110));

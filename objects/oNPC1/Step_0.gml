@@ -16,7 +16,7 @@ if anger >= attack_anger {
 if attack_state != ATTACK.PISSED {
 	if eat == true {
 		eat = false;
-		if _dist < 110 {
+		if _dist < anger_range {
 			anger += weight;
 		}
 	}

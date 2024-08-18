@@ -80,6 +80,8 @@
     {"id":{"name":"sLives3","path":"sprites/sLives3/sLives3.yy",},},
     {"id":{"name":"sPaperBall","path":"sprites/sPaperBall/sPaperBall.yy",},},
     {"id":{"name":"sPaperBallBreak","path":"sprites/sPaperBallBreak/sPaperBallBreak.yy",},},
+    {"id":{"name":"sProgBar","path":"sprites/sProgBar/sProgBar.yy",},},
+    {"id":{"name":"sProgBarBack","path":"sprites/sProgBarBack/sProgBarBack.yy",},},
     {"id":{"name":"sRoomDecor","path":"sprites/sRoomDecor/sRoomDecor.yy",},},
     {"id":{"name":"sRoomTiles","path":"sprites/sRoomTiles/sRoomTiles.yy",},},
     {"id":{"name":"sRunDown","path":"sprites/sRunDown/sRunDown.yy",},},

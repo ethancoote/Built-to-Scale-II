@@ -13,6 +13,12 @@ if place_meeting (x, y, oPlayer) && hit == false{
 	oPlayer.hit = true;
 }
 
+if depth_timer > 0 {
+	depth_timer--;
+} else {
+	depth = -100;
+}
+
 if hit {
 	depth = -100;
 	if image_index == 5 {

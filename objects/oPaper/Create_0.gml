@@ -7,5 +7,6 @@ direction = dir;
 spd = random_range(0.9, 1.3);
 speed = spd;
 hit = false;
+depth_timer = 10;
 
 walls = layer_tilemap_get_id("Walls");
