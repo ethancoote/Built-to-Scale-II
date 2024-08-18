@@ -50,6 +50,7 @@
     {"id":{"name":"oFood","path":"objects/oFood/oFood.yy",},},
     {"id":{"name":"oHole","path":"objects/oHole/oHole.yy",},},
     {"id":{"name":"oNPC1","path":"objects/oNPC1/oNPC1.yy",},},
+    {"id":{"name":"oNPCParent","path":"objects/oNPCParent/oNPCParent.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oUI","path":"objects/oUI/oUI.yy",},},
     {"id":{"name":"oWeightBack","path":"objects/oWeightBack/oWeightBack.yy",},},

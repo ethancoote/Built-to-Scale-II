@@ -1,5 +1,114 @@
+#region Attack
 
-#region Animation
+// set attack state
+if anger >= attack_anger {
+	attack_state = ATTACK.PISSED;
+} else if anger > 0 {
+	attack_state = ATTACK.MAD;
+} else {
+	attack_state = ATTACK.CALM;
+}
+
+// increase anger
+if attack_state != ATTACK.PISSED {
+	if eat == true {
+		eat = false;
+		var _dist = distance_to_object(oPlayer);
+		if _dist < 110 {
+			anger += weight;
+		}
+	}
+}
+
+// attack pissed
+if attack_state == ATTACK.PISSED {
+	
+}
+
+#endregion
+
+#region Depth
+
+if oPlayer.y < y {
+	depth = 200;
+} else {
+	depth = 202;
+}
+
+#endregion
+
+#region Movement
+// movement
+if state_index == STATE.IDLE {
+	x_spd = 0;
+	y_spd = 0;
+	if wait_timer > 0 {
+		wait_timer--;
+	} else {
+		wait_timer = wait_frames;
+		move_timer = move_frames;
+		state_index = STATE.RUN;
+		move_dir = irandom(3);
+	}
+}
+
+if state_index == STATE.RUN {
+	// set move direction
+	if move_timer > 0 {
+		if move_dir == 0 {
+			x_spd = -1;
+			y_spd = 0;
+			face_index = FACE.LEFT;
+		} else if move_dir == 1 {
+			x_spd = 1;
+			y_spd = 0;
+			face_index = FACE.RIGHT;
+		} else if move_dir == 2 {
+			x_spd = 0;
+			y_spd = -1;
+			face_index = FACE.UP;
+		} else if move_dir == 3 {
+			x_spd = 0;
+			y_spd = 1;
+			face_index = FACE.DOWN;
+		}
+		move_timer--;
+	} else {
+		state_index = STATE.IDLE;
+	}
+}
+
+#endregion
+
+#region Collision
+// y collision
+var _sub_pixel = 0.5;
+if place_meeting(x, y+y_spd, walls) {
+	var _pixel_check = _sub_pixel * sign(y_spd);
+	
+	while !place_meeting(x, y + _pixel_check, walls) {
+		y += _pixel_check;
+	}
+	y_spd = 0;
+}
+
+y += y_spd;
+
+// x collision
+if place_meeting(x+x_spd, y, walls) {
+	var _pixel_check = _sub_pixel * sign(x_spd);
+	
+	while !place_meeting(x + _pixel_check, y, walls) {
+		x += _pixel_check;
+	}
+	x_spd = 0;
+}
+
+x += x_spd;
+
+#endregion
+
+#region Animation 
 // idle
 if state_index == STATE.IDLE {
 	if face_index == FACE.UP {

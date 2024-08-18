@@ -1,21 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oNPC1",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oNPCParent",
+  "eventList":[],
   "managed":true,
-  "name":"oNPC1",
+  "name":"oNPCParent",
   "overriddenProperties":[],
   "parent":{
     "name":"NPC",
     "path":"folders/Objects/NPC.yy",
   },
-  "parentObjectId":{
-    "name":"oNPCParent",
-    "path":"objects/oNPCParent/oNPCParent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sIdleDown1",
-    "path":"sprites/sIdleDown1/sIdleDown1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

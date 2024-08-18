@@ -45,6 +45,8 @@ if y_spd > 0 {
 var _inst = instance_place(x, y, oFood);
 if _inst != noone {
 	oControl.weight += _inst.weight;
+	oNPC1.eat = true;
+	oNPC1.weight = _inst.weight;
 	instance_destroy(_inst);
 }
 
