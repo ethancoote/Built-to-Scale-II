@@ -38,6 +38,7 @@ if attack_state == ATTACK.PISSED {
 
 // attack throw
 if attack_state == ATTACK.THROW {
+	direction = point_direction(x, y, oPlayer.x, oPlayer.y);
 	if throw_timer <= 0 {
 		throw_timer = throw_frames;
 	} else {
@@ -51,7 +52,7 @@ if attack_state == ATTACK.THROW {
 // throw animation
 if throw_timer == 0 {
 	path_end();
-	var _inst = instance_create_depth(x, y, 200, oPaper);
+	var _inst = instance_create_depth(x, y, -100, oPaper);
 	throw_anim_timer = throw_anim_frames;
 }
 
@@ -115,6 +116,9 @@ if attack_state == ATTACK.CALM {
 	}
 } else if attack_state == ATTACK.PISSED {
 	state_index = STATE.RUN;
+}
+
+if attack_state == ATTACK.PISSED || attack_state == ATTACK.THROW {
 	if direction > 45 && direction < 135 {
 		face_index = FACE.UP;
 	} else if direction > 135 && direction < 225 {

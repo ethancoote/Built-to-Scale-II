@@ -2,6 +2,26 @@
 var _i = get_gamepad();
 get_controls(_i);
 
+#region Hit
+// got hit
+if hit {
+	hit = false;
+	if hit_timer <= 0 {
+		hit_timer = hit_frames;
+		hp--;
+	}
+}
+
+if hit_timer > 0 {
+	hit_timer--;
+	colour = c_red;
+	spd = 3.5;
+} else {
+	colour = c_white;
+	spd = 2.5;
+}
+#endregion
+
 #region Movement
 // movement
 hor_move = right_key - left_key;
