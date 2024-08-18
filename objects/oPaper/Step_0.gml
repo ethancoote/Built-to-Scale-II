@@ -14,6 +14,7 @@ if place_meeting (x, y, oPlayer) && hit == false{
 }
 
 if hit {
+	depth = -100;
 	if image_index == 5 {
 		instance_destroy();
 	}

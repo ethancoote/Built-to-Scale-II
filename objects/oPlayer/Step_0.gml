@@ -86,6 +86,8 @@ if win {
 if hp <= 0 {
 	oGame.lose = true;
 	state_index = STATE.STILL;
+	x_spd = 0;
+	y_spd = 0;
 }
 
 #endregion

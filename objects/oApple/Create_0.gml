@@ -1,1 +1,1 @@
-weight = 0.6;
+weight = 0.3;

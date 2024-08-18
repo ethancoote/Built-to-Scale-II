@@ -48,7 +48,7 @@ if attack_state == ATTACK.THROW {
 		path_end();
 		state_index = STATE.IDLE;
 		if oPlayer.state_index != STATE.STILL {
-			var _inst = instance_create_depth(x, y, -100, oPaper);
+			var _inst = instance_create_depth(x, y, 203, oPaper);
 		}
 		throw_anim_timer = throw_anim_frames;
 	} else {
