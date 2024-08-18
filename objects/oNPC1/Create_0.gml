@@ -11,14 +11,14 @@ face_index = FACE.DOWN;
 attack_state = ATTACK.CALM;
 
 // stats
-wait_frames = 200;
+wait_frames = round(random_range(150,250));
 throw_frames = 60;
 throw_anim_frames = 10;
 attack_anger = 1;
 throw_dist = 100;
 
 // misc
-wait_timer = 60;
+wait_timer = round(random_range(20,110));
 update_timer = 0;
 move_timer = 0;
 move_frames = 30;

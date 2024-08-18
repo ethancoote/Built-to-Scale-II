@@ -7,7 +7,7 @@ var _dist = distance_to_object(oPlayer);
 if anger >= attack_anger {
 	attack_state = ATTACK.PISSED;
 } else if anger > 0 {
-	attack_state = ATTACK.MAD;
+	attack_state = ATTACK.CALM;
 } else {
 	attack_state = ATTACK.CALM;
 }
@@ -25,7 +25,9 @@ if attack_state != ATTACK.PISSED {
 // attack pissed
 if attack_state == ATTACK.PISSED {
 	if _dist > throw_dist {
+		
 		if update_timer <= 0 {
+			state_index = STATE.RUN;
 			check_player();
 			update_timer = irandom(60);
 		} else {
@@ -38,27 +40,25 @@ if attack_state == ATTACK.PISSED {
 
 // attack throw
 if attack_state == ATTACK.THROW {
+	
 	direction = point_direction(x, y, oPlayer.x, oPlayer.y);
 	if throw_timer <= 0 {
 		throw_timer = throw_frames;
+		path_end();
+		state_index = STATE.IDLE;
+		var _inst = instance_create_depth(x, y, -100, oPaper);
+		throw_anim_timer = throw_anim_frames;
 	} else {
 		throw_timer--;
 	}
 	if _dist > throw_dist {
+		update_timer = 0;
 		attack_state = ATTACK.PISSED;
 	}
 }
 
-// throw animation
-if throw_timer == 0 {
-	path_end();
-	var _inst = instance_create_depth(x, y, -100, oPaper);
-	throw_anim_timer = throw_anim_frames;
-}
-
 if throw_anim_timer > 0 {
 	throw_anim_timer--;
-	state_index = STATE.IDLE
 }
 
 #endregion
@@ -66,7 +66,7 @@ if throw_anim_timer > 0 {
 #region Depth
 
 if oPlayer.y < y {
-	depth = 200;
+	depth = 199;
 } else {
 	depth = 202;
 }
@@ -114,8 +114,6 @@ if attack_state == ATTACK.CALM {
 			state_index = STATE.IDLE;
 		}
 	}
-} else if attack_state == ATTACK.PISSED {
-	state_index = STATE.RUN;
 }
 
 if attack_state == ATTACK.PISSED || attack_state == ATTACK.THROW {
