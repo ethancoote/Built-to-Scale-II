@@ -11,18 +11,22 @@ attack_state = ATTACK.CALM;
 
 // stats
 wait_frames = 200;
-attack_anger = 5;
+attack_anger = 1;
 
 // misc
 wait_timer = 60;
 move_timer = 0;
 move_frames = 30;
 move_dir = 0;
+spd = 1;
 x_spd = 0;
 y_spd = 0;
 anger = 0;
 eat = false;
 weight = 0;
+
+// path
+path = path_add();
 
 // getting tilemaps
 walls = [layer_tilemap_get_id("Walls"), 

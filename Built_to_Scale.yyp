@@ -57,6 +57,7 @@
     {"id":{"name":"oUI","path":"objects/oUI/oUI.yy",},},
     {"id":{"name":"oWeightBack","path":"objects/oWeightBack/oWeightBack.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"check_player","path":"scripts/check_player/check_player.yy",},},
     {"id":{"name":"controls","path":"scripts/controls/controls.yy",},},
     {"id":{"name":"sApple","path":"sprites/sApple/sApple.yy",},},
     {"id":{"name":"sFall","path":"sprites/sFall/sFall.yy",},},

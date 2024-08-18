@@ -1,3 +1,4 @@
+
 #region Attack
 
 // set attack state
@@ -22,7 +23,7 @@ if attack_state != ATTACK.PISSED {
 
 // attack pissed
 if attack_state == ATTACK.PISSED {
-	
+	check_player();
 }
 
 #endregion
@@ -38,45 +39,59 @@ if oPlayer.y < y {
 #endregion
 
 #region Movement
-// movement
-if state_index == STATE.IDLE {
-	x_spd = 0;
-	y_spd = 0;
-	if wait_timer > 0 {
-		wait_timer--;
-	} else {
-		wait_timer = wait_frames;
-		move_timer = move_frames;
-		state_index = STATE.RUN;
-		move_dir = irandom(3);
-	}
-}
-
-if state_index == STATE.RUN {
-	// set move direction
-	if move_timer > 0 {
-		if move_dir == 0 {
-			x_spd = -1;
-			y_spd = 0;
-			face_index = FACE.LEFT;
-		} else if move_dir == 1 {
-			x_spd = 1;
-			y_spd = 0;
-			face_index = FACE.RIGHT;
-		} else if move_dir == 2 {
-			x_spd = 0;
-			y_spd = -1;
-			face_index = FACE.UP;
-		} else if move_dir == 3 {
-			x_spd = 0;
-			y_spd = 1;
-			face_index = FACE.DOWN;
+if attack_state == ATTACK.CALM {
+	// movement
+	if state_index == STATE.IDLE {
+		x_spd = 0;
+		y_spd = 0;
+		if wait_timer > 0 {
+			wait_timer--;
+		} else {
+			wait_timer = wait_frames;
+			move_timer = move_frames;
+			state_index = STATE.RUN;
+			move_dir = irandom(3);
 		}
-		move_timer--;
-	} else {
-		state_index = STATE.IDLE;
+	}
+
+	if state_index == STATE.RUN {
+		// set move direction
+		if move_timer > 0 {
+			if move_dir == 0 {
+				x_spd = -spd;
+				y_spd = 0;
+				face_index = FACE.LEFT;
+			} else if move_dir == 1 {
+				x_spd = spd;
+				y_spd = 0;
+				face_index = FACE.RIGHT;
+			} else if move_dir == 2 {
+				x_spd = 0;
+				y_spd = -spd;
+				face_index = FACE.UP;
+			} else if move_dir == 3 {
+				x_spd = 0;
+				y_spd = spd;
+				face_index = FACE.DOWN;
+			}
+			move_timer--;
+		} else {
+			state_index = STATE.IDLE;
+		}
+	}
+} else if attack_state == ATTACK.PISSED {
+	state_index = STATE.RUN;
+	if direction > 45 && direction < 135 {
+		face_index = FACE.UP;
+	} else if direction > 135 && direction < 225 {
+		face_index = FACE.LEFT;
+	} else if direction > 225 && direction < 315 {
+		face_index = FACE.DOWN;
+	} else if direction > 315 || direction < 45 {
+		face_index = FACE.RIGHT;
 	}
 }
+show_debug_message(string(direction));
 
 #endregion
 

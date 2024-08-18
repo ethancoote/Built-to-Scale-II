@@ -1,5 +1,6 @@
 #macro TS 16
 
+// creating the tile map grid
 var _w = ceil(room_width / TS);
 var _h = ceil(room_height / TS);
 
@@ -19,5 +20,3 @@ for (var _i = 0; _i < _w; _i++) {
 		}
 	}
 }
-
-//mp_grid_add_instances(global.mp_grid, ,false);
