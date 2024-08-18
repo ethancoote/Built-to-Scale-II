@@ -8,6 +8,9 @@ if hit {
 	hit = false;
 	if hit_timer <= 0 && state_index != STATE.STILL{
 		hit_timer = hit_frames;
+		oCamera.shake_frames = 12;
+		oCamera.shake_pow = 2;
+		oCamera.shake = true;
 		hp--;
 	}
 }
@@ -67,6 +70,9 @@ if _inst != noone {
 	oControl.weight += _inst.weight;
 	oNPC1.eat = true;
 	oNPC1.weight = _inst.weight;
+	oCamera.shake_frames = 6;
+	oCamera.shake_pow = 1;
+	oCamera.shake = true;
 	instance_destroy(_inst);
 }
 

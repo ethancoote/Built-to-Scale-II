@@ -59,7 +59,7 @@
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oUI","path":"objects/oUI/oUI.yy",},},
     {"id":{"name":"oWeightBack","path":"objects/oWeightBack/oWeightBack.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Level1Room","path":"rooms/Level1Room/Level1Room.yy",},},
     {"id":{"name":"check_player","path":"scripts/check_player/check_player.yy",},},
     {"id":{"name":"controls","path":"scripts/controls/controls.yy",},},
     {"id":{"name":"sApple","path":"sprites/sApple/sApple.yy",},},
@@ -99,7 +99,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Level1Room","path":"rooms/Level1Room/Level1Room.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

@@ -3,4 +3,4 @@ weight = 80.00;
 win = false;
 level = 0;
 
-level_weight = [85, 95, 110, 160, 250];
+level_weight = [87, 100, 125, 160, 250];
