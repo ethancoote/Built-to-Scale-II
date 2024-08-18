@@ -70,6 +70,7 @@
     {"id":{"name":"sIdleRight1","path":"sprites/sIdleRight1/sIdleRight1.yy",},},
     {"id":{"name":"sIdleUp","path":"sprites/sIdleUp/sIdleUp.yy",},},
     {"id":{"name":"sIdleUp1","path":"sprites/sIdleUp1/sIdleUp1.yy",},},
+    {"id":{"name":"sPaperBall","path":"sprites/sPaperBall/sPaperBall.yy",},},
     {"id":{"name":"sRoomDecor","path":"sprites/sRoomDecor/sRoomDecor.yy",},},
     {"id":{"name":"sRoomTiles","path":"sprites/sRoomTiles/sRoomTiles.yy",},},
     {"id":{"name":"sRunDown","path":"sprites/sRunDown/sRunDown.yy",},},

@@ -91,7 +91,6 @@ if attack_state == ATTACK.CALM {
 		face_index = FACE.RIGHT;
 	}
 }
-show_debug_message(string(direction));
 
 #endregion
 
