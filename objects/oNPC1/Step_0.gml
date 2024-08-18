@@ -40,13 +40,16 @@ if attack_state == ATTACK.PISSED {
 
 // attack throw
 if attack_state == ATTACK.THROW {
-	
+	x_spd = 0;
+	y_spd = 0;
 	direction = point_direction(x, y, oPlayer.x, oPlayer.y);
 	if throw_timer <= 0 {
 		throw_timer = throw_frames;
 		path_end();
 		state_index = STATE.IDLE;
-		var _inst = instance_create_depth(x, y, -100, oPaper);
+		if oPlayer.state_index != STATE.STILL {
+			var _inst = instance_create_depth(x, y, -100, oPaper);
+		}
 		throw_anim_timer = throw_anim_frames;
 	} else {
 		throw_timer--;

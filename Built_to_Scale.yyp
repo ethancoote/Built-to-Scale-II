@@ -47,6 +47,7 @@
   "resources":[
     {"id":{"name":"fnPixel","path":"fonts/fnPixel/fnPixel.yy",},},
     {"id":{"name":"oApple","path":"objects/oApple/oApple.yy",},},
+    {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},},
     {"id":{"name":"oFood","path":"objects/oFood/oFood.yy",},},
     {"id":{"name":"oGame","path":"objects/oGame/oGame.yy",},},
@@ -71,6 +72,10 @@
     {"id":{"name":"sIdleRight1","path":"sprites/sIdleRight1/sIdleRight1.yy",},},
     {"id":{"name":"sIdleUp","path":"sprites/sIdleUp/sIdleUp.yy",},},
     {"id":{"name":"sIdleUp1","path":"sprites/sIdleUp1/sIdleUp1.yy",},},
+    {"id":{"name":"sLives0","path":"sprites/sLives0/sLives0.yy",},},
+    {"id":{"name":"sLives1","path":"sprites/sLives1/sLives1.yy",},},
+    {"id":{"name":"sLives2","path":"sprites/sLives2/sLives2.yy",},},
+    {"id":{"name":"sLives3","path":"sprites/sLives3/sLives3.yy",},},
     {"id":{"name":"sPaperBall","path":"sprites/sPaperBall/sPaperBall.yy",},},
     {"id":{"name":"sPaperBallBreak","path":"sprites/sPaperBallBreak/sPaperBallBreak.yy",},},
     {"id":{"name":"sRoomDecor","path":"sprites/sRoomDecor/sRoomDecor.yy",},},

@@ -6,7 +6,7 @@ get_controls(_i);
 // got hit
 if hit {
 	hit = false;
-	if hit_timer <= 0 {
+	if hit_timer <= 0 && state_index != STATE.STILL{
 		hit_timer = hit_frames;
 		hp--;
 	}
@@ -79,6 +79,15 @@ if win {
 	y_spd = 0;
 	state_index = STATE.STILL;
 }
+#endregion
+
+#region Lose
+// lose
+if hp <= 0 {
+	oGame.lose = true;
+	state_index = STATE.STILL;
+}
+
 #endregion
 
 #region Collision

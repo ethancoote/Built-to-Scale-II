@@ -1,5 +1,5 @@
 // stats
-spd = 2.5;
+spd = 2;
 depth = 200;
 hit_frames = 20;
 hp = 3;
