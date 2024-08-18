@@ -2,6 +2,8 @@
 #region Attack
 
 // set attack state
+var _dist = distance_to_object(oPlayer);
+
 if anger >= attack_anger {
 	attack_state = ATTACK.PISSED;
 } else if anger > 0 {
@@ -14,7 +16,6 @@ if anger >= attack_anger {
 if attack_state != ATTACK.PISSED {
 	if eat == true {
 		eat = false;
-		var _dist = distance_to_object(oPlayer);
 		if _dist < 110 {
 			anger += weight;
 		}
@@ -23,7 +24,40 @@ if attack_state != ATTACK.PISSED {
 
 // attack pissed
 if attack_state == ATTACK.PISSED {
-	check_player();
+	if _dist > throw_dist {
+		if update_timer <= 0 {
+			check_player();
+			update_timer = irandom(60);
+		} else {
+			update_timer--;
+		}
+	} else {
+		attack_state = ATTACK.THROW;
+	}
+}
+
+// attack throw
+if attack_state == ATTACK.THROW {
+	if throw_timer <= 0 {
+		throw_timer = throw_frames;
+	} else {
+		throw_timer--;
+	}
+	if _dist > throw_dist {
+		attack_state = ATTACK.PISSED;
+	}
+}
+
+// throw animation
+if throw_timer == 0 {
+	path_end();
+	var _inst = instance_create_depth(x, y, 200, oPaper);
+	throw_anim_timer = throw_anim_frames;
+}
+
+if throw_anim_timer > 0 {
+	throw_anim_timer--;
+	state_index = STATE.IDLE
 }
 
 #endregion
