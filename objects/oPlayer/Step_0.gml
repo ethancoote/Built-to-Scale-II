@@ -2,6 +2,14 @@
 var _i = get_gamepad();
 get_controls(_i);
 
+#region Walls
+
+if oControl.weight >= 117 {
+	walls = walls1;
+}
+
+#endregion
+
 #region Hit
 // got hit
 if hit {

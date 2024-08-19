@@ -37,4 +37,9 @@ done_fall = true;
 
 // getting tilemaps
 walls = [layer_tilemap_get_id("Walls"), 
+		 layer_tilemap_get_id("Environment"),
+		 oPot1, oPot2, oPot3];
+		 
+walls1 = [layer_tilemap_get_id("Walls"), 
 		 layer_tilemap_get_id("Environment")];
+		 
