@@ -113,6 +113,8 @@
     {"id":{"name":"sRunRight1","path":"sprites/sRunRight1/sRunRight1.yy",},},
     {"id":{"name":"sRunUp","path":"sprites/sRunUp/sRunUp.yy",},},
     {"id":{"name":"sRunUp1","path":"sprites/sRunUp1/sRunUp1.yy",},},
+    {"id":{"name":"sSandwich","path":"sprites/sSandwich/sSandwich.yy",},},
+    {"id":{"name":"sStole","path":"sprites/sStole/sStole.yy",},},
     {"id":{"name":"sWeightBack","path":"sprites/sWeightBack/sWeightBack.yy",},},
     {"id":{"name":"sWeightBackHover","path":"sprites/sWeightBackHover/sWeightBackHover.yy",},},
     {"id":{"name":"tsRoomDecor","path":"tilesets/tsRoomDecor/tsRoomDecor.yy",},},
