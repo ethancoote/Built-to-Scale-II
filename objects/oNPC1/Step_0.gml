@@ -1,3 +1,4 @@
+var _pitch = random_range(0.7, 1.3);
 
 #region Attack
 
@@ -51,6 +52,8 @@ if attack_state == ATTACK.THROW {
 		state_index = STATE.IDLE;
 		if oPlayer.state_index != STATE.STILL {
 			var _inst = instance_create_depth(x, y, 203, oPaper);
+
+			audio_play_sound(swoosh1, 1, false, 1, 0, _pitch);
 		}
 		throw_anim_timer = throw_anim_frames;
 	} else {

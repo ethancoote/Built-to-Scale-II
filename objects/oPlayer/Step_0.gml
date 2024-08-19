@@ -25,6 +25,7 @@ if hit {
 		oCamera.shake_frames = 12;
 		oCamera.shake_pow = 2;
 		oCamera.shake = true;
+		audio_play_sound(grunt1, 1, false);
 		hp--;
 	}
 }
