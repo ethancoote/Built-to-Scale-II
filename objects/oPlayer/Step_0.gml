@@ -143,6 +143,21 @@ if room == MenuRoom {
 
 #endregion
 
+#region Fall In
+if room != MenuRoom && room != Level1Room && falling {
+	y -= 500;
+	done_fall = false;
+	falling = false;
+}
+
+if y < start_pos[1] && done_fall == false {
+	y += 25;
+} else {
+	done_fall = true;
+}
+
+#endregion
+
 #region Animation
 // idle
 if state_index == STATE.IDLE {

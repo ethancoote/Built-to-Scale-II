@@ -29,6 +29,11 @@ win = false;
 hit = false;
 hit_timer = 0;
 colour = c_white;
+start_pos = [x, y];
+falling = true;
+done_fall = true;
+//fall_frames = 15;
+//fall_timer = 0;
 
 // getting tilemaps
 walls = [layer_tilemap_get_id("Walls"), 
