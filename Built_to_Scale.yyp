@@ -69,6 +69,7 @@
     {"id":{"name":"oUI","path":"objects/oUI/oUI.yy",},},
     {"id":{"name":"oWeightBack","path":"objects/oWeightBack/oWeightBack.yy",},},
     {"id":{"name":"Level1Room","path":"rooms/Level1Room/Level1Room.yy",},},
+    {"id":{"name":"Level2Room","path":"rooms/Level2Room/Level2Room.yy",},},
     {"id":{"name":"MenuRoom","path":"rooms/MenuRoom/MenuRoom.yy",},},
     {"id":{"name":"check_player","path":"scripts/check_player/check_player.yy",},},
     {"id":{"name":"controls","path":"scripts/controls/controls.yy",},},
@@ -119,6 +120,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"MenuRoom","path":"rooms/MenuRoom/MenuRoom.yy",},},
     {"roomId":{"name":"Level1Room","path":"rooms/Level1Room/Level1Room.yy",},},
+    {"roomId":{"name":"Level2Room","path":"rooms/Level2Room/Level2Room.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
