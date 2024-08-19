@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"sBook1",
   "bboxMode":2,
-  "bbox_bottom":19,
+  "bbox_bottom":28,
   "bbox_left":-1,
   "bbox_right":21,
   "bbox_top":-1,

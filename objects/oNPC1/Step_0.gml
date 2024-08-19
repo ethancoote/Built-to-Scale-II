@@ -24,7 +24,9 @@ if attack_state != ATTACK.PISSED {
 
 // attack pissed
 if attack_state == ATTACK.PISSED {
-	if _dist > throw_dist {
+	if _dist > 210 {
+		attack_state = ATTACK.CALM;
+	} else if _dist > throw_dist {
 		
 		if update_timer <= 0 {
 			state_index = STATE.RUN;

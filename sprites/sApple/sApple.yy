@@ -3,7 +3,7 @@
   "%Name":"sApple",
   "bboxMode":2,
   "bbox_bottom":24,
-  "bbox_left":-3,
+  "bbox_left":-7,
   "bbox_right":18,
   "bbox_top":-5,
   "collisionKind":1,
