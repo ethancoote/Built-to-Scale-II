@@ -33,6 +33,9 @@ weight = 0;
 throw_timer = 1;
 throw_anim_timer = 0;
 
+annoy_timer = 240;
+angry_timer = 240;
+
 base_depth = depth;
 
 // path

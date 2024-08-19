@@ -1,2 +1,2 @@
-weight = 1;
+weight = 1.5;
 min_weight = 99;
