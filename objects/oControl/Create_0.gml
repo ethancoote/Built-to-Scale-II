@@ -4,6 +4,6 @@ win = false;
 level = 0;
 max_level = 2;
 level_change_timer = 0;
-level_change_frames = 120;
+level_change_frames = 60;
 level_room = [Level1Room, Level2Room];
 level_weight = [100, 110, 125, 160, 250];
