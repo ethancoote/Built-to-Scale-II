@@ -38,8 +38,20 @@ done_fall = true;
 // getting tilemaps
 walls = [layer_tilemap_get_id("Walls"), 
 		 layer_tilemap_get_id("Environment"),
-		 oPot1, oPot2, oPot3];
+		 oPot1, oPot2, oPot3, oTree1, oTree2, oTree3];
+		 
+walls_2_tree = [layer_tilemap_get_id("Walls"), 
+		 layer_tilemap_get_id("Environment"),
+		 oTree2, oTree3];
+		 
+walls_1_tree = [layer_tilemap_get_id("Walls"), 
+		 layer_tilemap_get_id("Environment"),
+		 oTree3];
 		 
 walls1 = [layer_tilemap_get_id("Walls"), 
+		 layer_tilemap_get_id("Environment"),
+		 oTree1, oTree2, oTree3];
+		 
+walls_free = [layer_tilemap_get_id("Walls"), 
 		 layer_tilemap_get_id("Environment")];
 		 

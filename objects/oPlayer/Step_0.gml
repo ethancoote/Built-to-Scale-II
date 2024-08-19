@@ -4,7 +4,13 @@ get_controls(_i);
 
 #region Walls
 
-if oControl.weight >= 117 {
+if oControl.weight >= 171 {
+	walls = walls_free;
+} else if oControl.weight >= 155 {
+	walls = walls_1_tree;
+} else if oControl.weight >= 135 {
+	walls = walls_2_tree;
+} else if oControl.weight >= 117 {
 	walls = walls1;
 }
 
