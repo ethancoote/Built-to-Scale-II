@@ -27,31 +27,34 @@ if lose {
 }
 
 if draw_lose { 
+	draw_sprite(sLose, 0, 174, 90);
+	/*
 	draw_set_halign(fa_center);
 	draw_set_font(fnPixel);
 	draw_text(240, 96, "You Got Fired...");
 	draw_set_halign(fa_left);
+	*/
 }
 
 if win {
-	draw_set_halign(fa_center);
-	draw_set_font(fnPixel);
-	draw_text(240, 96, "You Win!");
+
 	instance_create_depth(240, 170, depth+1, oButtonMenu, {
 		image_xscale: image_xscale*2,
 		image_yscale: image_yscale*2 ,
 		image_alpha: 1
 	});
-	draw_set_halign(fa_left);
 	win = false;
 	draw_win = true
 }
 
-if draw_win { 
+if draw_win {
+	/*
 	draw_set_halign(fa_center);
 	draw_set_font(fnPixel);
 	draw_text(240, 96, "You Win!");
 	draw_set_halign(fa_left);
+	*/
+	draw_sprite(sWin, 0, 174, 90);
 }
 
 // progress bar
