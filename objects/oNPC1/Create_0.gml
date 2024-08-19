@@ -33,6 +33,8 @@ weight = 0;
 throw_timer = 1;
 throw_anim_timer = 0;
 
+base_depth = depth;
+
 // path
 path = path_add();
 

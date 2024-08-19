@@ -1,5 +1,3 @@
-
-
 if level_weight[level] <= weight {
 	win = true;
 }

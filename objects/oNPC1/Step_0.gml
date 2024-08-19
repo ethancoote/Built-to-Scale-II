@@ -69,9 +69,9 @@ if throw_anim_timer > 0 {
 #region Depth
 
 if oPlayer.y < y {
-	depth = 199;
+	depth = base_depth -1;
 } else {
-	depth = 202;
+	depth = base_depth + 2;
 }
 
 #endregion

@@ -135,6 +135,14 @@ x += x_spd;
 
 #endregion
 
+#region Menu
+
+if room == MenuRoom {
+	state_index = STATE.STILL;
+}
+
+#endregion
+
 #region Animation
 // idle
 if state_index == STATE.IDLE {
