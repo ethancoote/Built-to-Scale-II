@@ -16,7 +16,27 @@ if lose {
 	draw_set_halign(fa_center);
 	draw_set_font(fnPixel);
 	draw_text(240, 96, "You Got Fired...");
+	
+	instance_create_depth(240, 170, depth+1, oButtonMenu, {
+		image_xscale: image_xscale*2,
+		image_yscale: image_yscale*2 ,
+		image_alpha: 1
+	});
+
 	draw_set_halign(fa_left);
+}
+
+if win {
+	draw_set_halign(fa_center);
+	draw_set_font(fnPixel);
+	draw_text(240, 96, "You Win!");
+	instance_create_depth(240, 170, depth+1, oButtonMenu, {
+		image_xscale: image_xscale*2,
+		image_yscale: image_yscale*2 ,
+		image_alpha: 1
+	});
+	draw_set_halign(fa_left);
+	win = false;
 }
 
 // progress bar

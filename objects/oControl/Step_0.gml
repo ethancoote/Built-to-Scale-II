@@ -8,4 +8,8 @@ if win {
 		image_index: 0
 	});
 	oPlayer.win = true;
+	if room != MenuRoom {
+		oGame.win = true;
+	}
+	
 }

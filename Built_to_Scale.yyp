@@ -53,6 +53,7 @@
     {"id":{"name":"oBook4","path":"objects/oBook4/oBook4.yy",},},
     {"id":{"name":"oButtonBack","path":"objects/oButtonBack/oButtonBack.yy",},},
     {"id":{"name":"oButtonBackShort","path":"objects/oButtonBackShort/oButtonBackShort.yy",},},
+    {"id":{"name":"oButtonMenu","path":"objects/oButtonMenu/oButtonMenu.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},},
     {"id":{"name":"oDonut","path":"objects/oDonut/oDonut.yy",},},
