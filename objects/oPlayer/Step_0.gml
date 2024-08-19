@@ -67,13 +67,15 @@ if y_spd > 0 {
 // eat
 var _inst = instance_place(x, y, oFood);
 if _inst != noone {
-	oControl.weight += _inst.weight;
-	oNPC1.eat = true;
-	oNPC1.weight = _inst.weight;
-	oCamera.shake_frames = 6;
-	oCamera.shake_pow = 1;
-	oCamera.shake = true;
-	instance_destroy(_inst);
+	if oControl.weight > _inst.min_weight {
+		oControl.weight += _inst.weight;
+		oNPC1.eat = true;
+		oNPC1.weight = _inst.weight;
+		oCamera.shake_frames = 6;
+		oCamera.shake_pow = 1;
+		oCamera.shake = true;
+		instance_destroy(_inst);
+	}
 }
 
 #endregion
