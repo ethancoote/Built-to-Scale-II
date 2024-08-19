@@ -1,10 +1,11 @@
 
 function check_player(){
 	var _dist = distance_to_object(oPlayer);
-	
-	var _found_player = mp_grid_path(global.mp_grid, path, x, y, oPlayer.x, oPlayer.y, false);
+	var _x_range = choose(-1,0,1);
+	var _y_range = choose(-1,0,1);
+	var _found_player = mp_grid_path(global.mp_grid, path, x, y, oPlayer.x + _x_range, oPlayer.y + _y_range, false);
 	
 	if _found_player {
-		path_start(path, spd, path_action_stop, false);
+		path_start(path, spd* 1.5, path_action_stop, false);
 	}
 }

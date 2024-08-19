@@ -65,18 +65,25 @@ if y_spd > 0 {
 
 #region Eat
 // eat
-var _inst = instance_place(x, y, oFood);
-if _inst != noone {
-	if oControl.weight > _inst.min_weight {
-		oControl.weight += _inst.weight;
-		oNPC1.eat = true;
-		oNPC1.weight = _inst.weight;
-		oCamera.shake_frames = 6;
-		oCamera.shake_pow = 1;
-		oCamera.shake = true;
-		instance_destroy(_inst);
+var _list = ds_list_create();
+var _num = instance_place_list(x, y, oFood, _list, false);
+
+
+if _num > 0 {
+	for (var _j = 0; _j < _num; _j++) {
+		if oControl.weight >= _list[| _j].min_weight {
+			oControl.weight += _list[| _j].weight;
+			oNPC1.eat = true;
+			oNPC1.weight = _list[| _j].weight;
+			oCamera.shake_frames = 6;
+			oCamera.shake_pow = 1;
+			oCamera.shake = true;
+			instance_destroy(_list[| _j]);
+		}
 	}
+	
 }
+ds_list_destroy(_list);
 
 #endregion
 
