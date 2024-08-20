@@ -52,8 +52,7 @@ if attack_state == ATTACK.THROW {
 		state_index = STATE.IDLE;
 		if oPlayer.state_index != STATE.STILL {
 			var _inst = instance_create_depth(x, y, 203, oPaper);
-
-			audio_play_sound(swoosh1, 1, false, 1, 0, _pitch);
+			audio_play_sound_at(swoosh1, x, y, 0, 100, 300, 1, false, 0, 0.5, 0, _pitch);
 		}
 		throw_anim_timer = throw_anim_frames;
 	} else {

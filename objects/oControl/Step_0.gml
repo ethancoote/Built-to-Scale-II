@@ -17,10 +17,13 @@ if win {
 	// win level
 	if level == max_level {
 		if room != MenuRoom {
+			audio_play_sound(win2, 0, false, 0.5);
 			oGame.win = true;
 		}
 	}
 }
+
+audio_listener_position(oPlayer.x, oPlayer.y, 0);
 
 if level_change_timer > 0 {
 	level_change_timer--;

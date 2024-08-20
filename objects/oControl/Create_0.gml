@@ -7,3 +7,6 @@ level_change_timer = 0;
 level_change_frames = 60;
 level_room = [Level1Room, Level2Room];
 level_weight = [100, 240, 250, 350, 500];
+
+audio_listener_orientation(0, 0, 1000,0,-1,0)
+

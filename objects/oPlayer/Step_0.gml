@@ -1,6 +1,13 @@
+
+#region Setup
 // get controls
 var _i = get_gamepad();
 get_controls(_i);
+
+// audio
+var _pitch = random_range(0.6, 0.9);
+
+#endregion
 
 #region Walls
 
@@ -83,10 +90,14 @@ if y_spd > 0 {
 var _list = ds_list_create();
 var _num = instance_place_list(x, y, oFood, _list, false);
 
-
-if _num > 0 {
+if _num > 0 && done_fall{
 	for (var _j = 0; _j < _num; _j++) {
 		if oControl.weight >= _list[| _j].min_weight {
+			var _k = choose(0, 1);
+			var _pitch2 = random_range(0.8, 1.2);
+			audio_play_sound(pop1, 1, false, 0.3, 0, _pitch2);
+			audio_play_sound(eat_sounds[_k], 1, false, 1, 0, _pitch);
+			
 			oControl.weight += _list[| _j].weight;
 			oNPC1.eat = true;
 			oNPC1.weight = _list[| _j].weight;
@@ -113,11 +124,31 @@ if win {
 
 #region Lose
 // lose
-if hp <= 0 {
+if hp <= 0 && !lose{
 	oGame.lose = true;
+	audio_play_sound(lose1, 0, false);
+	lose = true;
+}
+
+if lose {
 	state_index = STATE.STILL;
 	x_spd = 0;
 	y_spd = 0;
+}
+
+#endregion
+
+#region MoveSound
+
+if x_spd != 0 || y_spd != 0 {
+	if step_timer == 0 {
+		var _pitch1 = random_range(0.7, 1.2);
+		var _gain = random_range(0.1, 0.6);
+		audio_play_sound(step1, 0, false, _gain, 0, _pitch1);
+		step_timer = step_frames
+	} else {
+		step_timer--;
+	}
 }
 
 #endregion

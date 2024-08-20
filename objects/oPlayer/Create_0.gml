@@ -32,6 +32,10 @@ colour = c_white;
 start_pos = [x, y];
 falling = true;
 done_fall = true;
+eat_sounds = [eat4, eat5];
+step_timer = 0;
+step_frames = 15;
+lose = false;
 //fall_frames = 15;
 //fall_timer = 0;
 
@@ -54,4 +58,4 @@ walls1 = [layer_tilemap_get_id("Walls"),
 		 
 walls_free = [layer_tilemap_get_id("Walls"), 
 		 layer_tilemap_get_id("Environment")];
-		 
+		

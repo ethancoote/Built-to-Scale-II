@@ -44,3 +44,6 @@ path = path_add();
 // getting tilemaps
 walls = [layer_tilemap_get_id("Walls"), 
 		 layer_tilemap_get_id("Environment")];
+		 
+audio_emitter = audio_emitter_create();
+audio_falloff_set_model(audio_falloff_exponent_distance_clamped);
