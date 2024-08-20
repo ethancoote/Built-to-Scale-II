@@ -13,5 +13,6 @@ instance_create_depth(240, 200, depth+1, oButtonBack, {
 oControl.level = 0;
 oControl.weight = 80;
 oControl.timer = 300;
+oControl.timer_stop = false;
 
 

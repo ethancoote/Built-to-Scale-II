@@ -112,16 +112,9 @@ if _num > 0 && done_fall{
 				eat = true;
 				
 			}
-			/*for (var _l = 0; _l<instance_number(oNPC1);_l++) {
-				var _npc = instance_find(oNPC1, _l);
-				_npc.eat = true;
-				_npc.weight = weight;
-			}*/
-			//oNPC1.eat = true;
-			//oNPC1.weight = _list[| _j].weight;
-			oCamera.shake_frames = 6;
-			oCamera.shake_pow = 1;
-			oCamera.shake = true;
+			//oCamera.shake_frames = 6;
+			//oCamera.shake_pow = 1;
+			//oCamera.shake = true;
 			instance_destroy(_list[| _j]);
 		}
 	}
@@ -170,6 +163,13 @@ if x_spd != 0 || y_spd != 0 {
 		step_timer--;
 	}
 }
+
+#endregion
+
+#region Scaling
+
+image_xscale = 1 * oControl.weight/100;
+image_yscale = 1 * oControl.weight/100;
 
 #endregion
 

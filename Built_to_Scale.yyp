@@ -158,6 +158,7 @@
     {"id":{"name":"sRunUp","path":"sprites/sRunUp/sRunUp.yy",},},
     {"id":{"name":"sRunUp1","path":"sprites/sRunUp1/sRunUp1.yy",},},
     {"id":{"name":"sSandwich","path":"sprites/sSandwich/sSandwich.yy",},},
+    {"id":{"name":"sScreen","path":"sprites/sScreen/sScreen.yy",},},
     {"id":{"name":"sStole","path":"sprites/sStole/sStole.yy",},},
     {"id":{"name":"sTree1","path":"sprites/sTree1/sTree1.yy",},},
     {"id":{"name":"sTree2","path":"sprites/sTree2/sTree2.yy",},},
