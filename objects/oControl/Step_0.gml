@@ -1,3 +1,16 @@
+// update delta_time
+actual_delta = delta_time/1000000;
+global.delta_mult = actual_delta/target_delta;
+
+if room == Level1Room || room == Level2Room {
+	timer -= (1/60) * global.delta_mult;
+}
+
+if timer <= 0 {
+	oPlayer.hp = 0;
+}
+
+
 if level_weight[level] <= weight {
 	win = true;
 	level+= 1;
@@ -17,17 +30,25 @@ if win {
 	// win level
 	if level == max_level {
 		if room != MenuRoom {
-			audio_play_sound(win2, 0, false, 0.5);
+			LootLockerSubmitScore("24185", string(timer));
+			audio_play_sound(win2, 0, false, 0.3);
 			oGame.win = true;
 		}
 	}
 }
+if room != NameRoom {
+	audio_listener_position(oPlayer.x, oPlayer.y, 0);
+}
 
-audio_listener_position(oPlayer.x, oPlayer.y, 0);
 
 if level_change_timer > 0 {
 	level_change_timer--;
 	if level_change_timer == 1 {
 		room_goto(level_room[level]);
 	}
+}
+
+if set_ll_name == true {
+	LootLockerSetPlayerName(ll_name);
+	set_ll_name = false;
 }

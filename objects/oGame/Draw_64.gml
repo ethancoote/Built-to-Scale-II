@@ -55,3 +55,10 @@ if _perc > 1 {
 }
 draw_sprite_ext(sProgBarBack, image_index, 108, 12, image_xscale*2, image_yscale*2, 0, c_white, 1);
 draw_sprite_ext(sProgBar, image_index, 108, 12, image_xscale*2*_perc, image_yscale*2, 0, c_white, 1);
+
+// timer
+draw_sprite_ext(sWeightBack, image_index, 240, 246, image_xscale*2, image_yscale*2, 0, c_white, 1);
+draw_set_font(fnPixel);
+draw_set_halign(fa_center);
+draw_text(240, 220, string(oControl.timer));
+draw_set_halign(fa_left);

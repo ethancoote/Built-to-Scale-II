@@ -7,6 +7,14 @@ get_controls(_i);
 // audio
 var _pitch = random_range(0.6, 0.9);
 
+// weight scaling
+/*
+image_xscale = 1 * (oControl.weight/100);
+
+if image_xscale < 0.9 {
+	image_xscale = 0.9;
+}*/
+
 #endregion
 
 #region Walls
@@ -95,8 +103,8 @@ if _num > 0 && done_fall{
 		if oControl.weight >= _list[| _j].min_weight {
 			var _k = choose(0, 1);
 			var _pitch2 = random_range(0.8, 1.2);
-			audio_play_sound(pop1, 1, false, 0.3, 0, _pitch2);
-			audio_play_sound(eat_sounds[_k], 1, false, 1, 0, _pitch);
+			audio_play_sound(pop1, 1, false, 0.4, 0, _pitch2);
+			audio_play_sound(eat_sounds[_k], 1, false, 0.5, 0, _pitch);
 			
 			oControl.weight += _list[| _j].weight;
 			oNPC1.eat = true;

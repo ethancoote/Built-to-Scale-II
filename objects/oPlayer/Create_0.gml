@@ -4,6 +4,8 @@ base_depth = depth;
 hit_frames = 20;
 hp = 3;
 
+
+
 // states
 enum STATE {
 	IDLE,
