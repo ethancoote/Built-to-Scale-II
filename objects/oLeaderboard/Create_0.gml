@@ -3,3 +3,5 @@ instance_create_depth(240, 220, depth+1, oButtonMenu, {
 	image_yscale: image_yscale*2 ,
 	image_alpha: 1
 });
+
+array_names = [];
