@@ -16,6 +16,7 @@ if anger >= attack_anger {
 // increase anger
 if attack_state != ATTACK.PISSED {
 	if eat == true {
+		show_debug_message(string(eat) + string(id));
 		eat = false;
 		if _dist < anger_range {
 			anger += weight;

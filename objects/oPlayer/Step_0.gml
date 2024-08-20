@@ -107,8 +107,18 @@ if _num > 0 && done_fall{
 			audio_play_sound(eat_sounds[_k], 1, false, 0.5, 0, _pitch);
 			
 			oControl.weight += _list[| _j].weight;
-			oNPC1.eat = true;
-			oNPC1.weight = _list[| _j].weight;
+			with (oNPC1) {
+				weight = 0.4;
+				eat = true;
+				
+			}
+			/*for (var _l = 0; _l<instance_number(oNPC1);_l++) {
+				var _npc = instance_find(oNPC1, _l);
+				_npc.eat = true;
+				_npc.weight = weight;
+			}*/
+			//oNPC1.eat = true;
+			//oNPC1.weight = _list[| _j].weight;
 			oCamera.shake_frames = 6;
 			oCamera.shake_pow = 1;
 			oCamera.shake = true;
@@ -135,11 +145,13 @@ if win {
 if hp <= 0 && !lose{
 	oGame.lose = true;
 	audio_play_sound(lose1, 0, false);
+	
 	lose = true;
 }
 
 if lose {
 	state_index = STATE.STILL;
+	oControl.timer_stop = true;
 	x_spd = 0;
 	y_spd = 0;
 }

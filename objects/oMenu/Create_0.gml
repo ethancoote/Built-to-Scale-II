@@ -7,7 +7,7 @@ instance_create_depth(240, 150, depth+1, oButtonStartRoom, {
 instance_create_depth(240, 200, depth+1, oButtonBack, {
 	image_xscale: image_xscale*2,
 	image_yscale: image_yscale*2 ,
-	image_alpha: 0.5
+	image_alpha: 1
 });
 
 oControl.level = 0;

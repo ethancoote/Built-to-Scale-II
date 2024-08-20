@@ -14,7 +14,7 @@ draw_sprite_ext(health_sprite, image_index, 28, 12, image_xscale*2, image_yscale
 // lose
 if lose {
 	
-	
+	oControl.timer_stop = true;
 	instance_create_depth(240, 170, depth+1, oButtonMenu, {
 		image_xscale: image_xscale*2,
 		image_yscale: image_yscale*2 ,
